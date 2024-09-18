@@ -1,0 +1,67 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <title class="underline">{% block title %}อาหารพื้นเมืองอุบลราชธานี{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+</head>
+
+<body class="bg-gray-100">
+
+<!-- แทบสีเหลืองด้านบน -->
+<div class="bg-yellow-500 w-full py-4">
+    <div class="flex justify-start items-center pl-4">
+        <img src="https://thaistationpayson.com/wp-content/uploads/2023/07/Menu-Plates-01.png" class="h-6 mr-3 sm:h-9" alt="Logo">
+        <a href="/" class="text-white font-Sarabun text-xl mr-4 " style="font-family: 'Prompt'">หน้าแรก</a>
+        <a href="/" class="text-white font-Sarabun text-xl mr-4" style="font-family: 'Prompt'">ตารางเทียบแคลอรี่</a>
+        <a href="/person" class="text-white font-Sarabun text-xl" style="font-family: 'Prompt'">ผู้จัดทำ</a>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-center text-2xl  mb-8 underline ">อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี</h2>
+
+    <!-- สามคอลัมน์ -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- คอลัมน์ 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <img src="{% static 'imag/01/f0101.jpg' %}" alt="เมี่ยงคำ" class="mx-auto mb-4 w-32 h-32 rounded-full object-cover">
+            <h3 class="text-3xl font-Mitr mb-2">เมี่ยงคำกลีบบัวหลวงแบบโบราณ</h3>
+            <p class="text-gray-700 mb-4">มีคุณค่าทางสมุนไพรสูง เพราะมีคุณสมบัติในการบำรุงรักษาธาตุทั้ง 4 เพื่อให้สมดุลกัน กลีบบัวหลวงมีสีสันสวยงาม มีสรรพคุณบำรุงร่างกาย ห้ามเลือด มีเส้นใยอาหารสูง และกระตุ้นการขับถ่ายเป็นยาสมานแผล ช่วยบำรุงร่างกาย บำรุงหัวใจ ลดความดันโลหิตสูง และลดระดับน้ำตาลในเลือดได้</p>
+            <a href="food1/" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">เรียนรู้เพิ่มเติม »</a>
+        </div>
+
+        <!-- คอลัมน์ 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <img src="{% static 'imag/02/card-02.jpg' %}" alt="ปลาส้ม" class="mx-auto mb-4 w-32 h-32 rounded-full object-cover">
+            <h3 class="text-3xl font-Mitr mb-2">ปลาส้มทรงเครื่องสมุนไพร</h3>
+            <p class="text-gray-700 mb-4">เนื้อปลาที่นำมาเป็นปลาส้มจะเลือกใช้ปลาบึกและปลาสวาย ซึ่งเป็นปลาธรรมชาติจากลุ่มแม่น้ำโขง เนื้อปลามีคุณค่าทางโภชนาการ อุดมไปด้วยโปรตีนสูง ไขมันต่ำ ประกอบกับจังหวัดอุบลราชธานีมีแม่น้ำไหลผ่านถึง 3 สาย ได้แก่ แม่น้ำมูล แม่น้ำชี และแม่น้ำโขง จึงอุดมไปด้วยพันธุ์ปลานานาชนิด จึงได้รับสมญานามยกให้เป็นราชธานีแห่งปลาแซ่บหลาย</p>
+            <a href="food2/" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">เรียนรู้เพิ่มเติม »</a>
+        </div>
+
+        <!-- คอลัมน์ 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <img src="{% static 'imag/03/card-03.jpg' %}" alt="หมี่กะทิ" class="mx-auto mb-4 w-32 h-32 rounded-full object-cover">
+            <h3 class="text-3xl font-Mitr mb-2">หมี่กะทิ</h3>
+            <p class="text-gray-700 mb-4">มีคุณค่าทางสมุนไพรสูง มีใยอาหารสูง มีวิตามินและเกลือแร่ที่สำคัญ อยู่ในส่วนประกอบของอาหารและในส่วนที่เป็นเครื่องเคียง อาหารพื้นเมืองอุดมด้วยพืชผักสมุนไพรมากมายหลายชนิด ซึ่งมีสรรพคุณทางยาจากสารพฤกษเคมี จึงมีคุณสมบัติในการรักษาสุขภาพให้เป็นปกติกับปรับปรุงสุขภาพให้ดีขึ้นและลดอัตราเสี่ยงต่อการเกิดโรค</p>
+            <a href="food3/" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">เรียนรู้เพิ่มเติม »</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

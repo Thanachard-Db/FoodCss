@@ -1,0 +1,54 @@
+{% extends "_base.html" %}
+
+{% block title %}อาหารพื้นเมืองอุบลราชธานี{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>อาหารพื้นเมืองอุบลราชธานี</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+</head>
+
+<body class="bg-gray-100">
+    
+
+    <div class="mt-8 flex justify-center">
+        <div class="max-w-sm text-center">
+            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden border-2 border-black">
+                <img class="w-full" src="{% static 'imag/IMG_2597.jpg' %}" alt="Profile Image">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800">นาย ธนชาติ คู่เรืองตระกูล</h2>
+                    <p class="text-gray-600 mt-2">นักศึกษาที่ชอบศึกษาโค้ดเวลาว่างเขียนโค้ด ไม่ก็เล่นเกม</p>
+                </div>
+                <div class="px-6 py-4">
+                    <span class="inline-block bg-blue-400 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Unity</span>
+                    <span class="inline-block bg-yellow-400 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">PHP</span>
+                    <span class="inline-block bg-green-400 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">React</span>
+                    <span class="inline-block bg-red-400 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">MySQL</span>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+{% endblock content %}

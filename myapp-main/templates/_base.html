@@ -1,0 +1,40 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}อาหารพื้นเมืองอุบลราชธานี{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+</head>
+
+<body class="bg-gray-100">
+
+
+<div class="bg-yellow-500 w-full py-4">
+    <div class="flex justify-start items-center pl-4">
+        <img src="https://thaistationpayson.com/wp-content/uploads/2023/07/Menu-Plates-01.png" class="h-6 mr-3 sm:h-9" alt="Logo">
+        <a href="/" class="text-white font-Sarabun text-xl mr-4">หน้าแรก</a>
+        <a href="/" class="text-white font-Sarabun text-xl mr-4">ตารางเทียบแคลอรี่</a>
+        <a href="/person" class="text-white font-Sarabun text-xl">ผู้จัดทำ</a>
+    </div>
+</div>
+
+
+<div class="container mx-auto px-4 py-8">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
